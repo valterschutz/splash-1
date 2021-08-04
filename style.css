@@ -1,0 +1,153 @@
+/* General */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    color: #333333;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Typography */
+h1 {
+    color: white;
+    margin: 1em 0;
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: tomato;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+header {
+    color: tomato;
+    font-size: .8rem;
+    font-weight: 700;
+    order: -1;
+    /* max-width: 20em; */
+    margin: 0 auto;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 0;
+
+}
+
+header p {
+    margin-top: 0;
+    border-top: 5px solid tomato;
+}
+
+.fine-print {
+    font-size: .8rem;
+    color: darkgray;
+}
+
+.section-info .fine-print {
+    margin-bottom: 0;
+}
+
+.bg-dark {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Images */
+img[src="img/trooper-cropped.jpg"] {
+    max-width: 200px;
+    border-radius: 100px;
+    border: 3px solid #ffffff;
+    margin-left: 20px;
+}
+
+/* Sections */
+/* .container { */
+    /* max-width: 500px; */
+    /* margin: 0 auto; */
+/* } */
+
+section {
+    padding: 0 1.5em;
+}
+
+section * {
+    max-width: 500px;
+}
+.section-hero {
+    background-color: dimgray;
+    background-image: url("img/city.jpg");
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.section-info, .section-full-width {
+    padding-top: 2em;
+}
+
+.section-hero, .section-info, .section-full-width {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2em;
+}
+
+.section-hero .container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (min-width: 950px) {
+    html {
+        font-size: 1.2rem;
+    }
+    .section-flex-container {
+        display: flex;
+    }
+
+    .section-flex-container section {
+        width: 50%;
+        min-height: 50vh;
+    }
+
+    .section-full-width {
+        flex-direction: row;
+        justify-content: center;
+        min-height: 50vh;
+    }
+}
+
+@media (min-width: 1500px) {
+    body {
+        display: flex;
+        justify-content: stretch;
+    }
+
+    .section-full-width {
+        flex-direction: column;
+        min-height: 100vh;
+        width: 30%;
+    }
+
+    .section-flex-container {
+        width: 70%;
+    }
+}
